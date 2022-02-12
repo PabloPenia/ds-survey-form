@@ -1,0 +1,85 @@
+form
+  fieldset
+    legend Account Information
+    .campo.names
+      label#name-label(for='name') Name
+      input#name(type='text' placeholder='Enter your name' required='')
+    .campo.names
+      label#email-label(for='email') Email
+      input#email(type='email' placeholder='example@mail.com' required='')
+  fieldset
+    legend Describe your main character
+    .campo
+      label#number-label(for='number') Level
+      input#number(type='number' min='1' max='99' placeholder='level')
+    #dropdown1.campo
+      label(for='dropdown') Class
+      select#dropdown
+        option(disabled='' hidden='' selected='') Choose
+        option(value='andorian') Andorian
+        option(value='denobulan') Denobulan
+        option(value='klingon') Klingon
+        option(value='orion') Orion
+        option(value='romulan') Romulan
+        option(value='terran') Terran
+        option(value='vulcan') Vulcan
+    p Job
+    .radios
+      .radio
+        input#assassin(type='radio' name='job' value='assassin')
+        label(for='assassin') Assassin
+      .radio
+        input#healer(type='radio' name='job' value='healer')
+        label(for='healer') Healer
+      .radio
+        input#ranger(type='radio' name='job' value='Ranger')
+        label(for='ranger') Ranger
+      .radio
+        input#tank(type='radio' name='job' value='tank')
+        label(for='tank') Tank
+      .radio
+        input#wizard(type='radio' name='job' value='wizard')
+        label(for='wizard') Wizard
+  fieldset
+    legend Tell us about your playing
+    #dropdown2.campo
+      label#time-label(for='time') How many hours do you play the game?
+      select#time(name='time')
+        option(value='4') 4hs per week
+        option(value='6') 6hs per week
+        option(value='10') 10hs per week
+        option(value='24') Everytime
+    p Which campaigns do you prefer?
+    .checkboxes
+      .checkbox
+        input#campaign1(type='checkbox' name='campaigns' value='campaign1')
+        label(for='campaign1') Vulcan Catacombs
+      .checkbox
+        input#campaign2(type='checkbox' name='campaigns' value='campaign2')
+        label(for='campaign2') Orion Market
+      .checkbox
+        input#campaign3(type='checkbox' name='campaign' value='campaign3')
+        label(for='campaign3') Terran Dungeons
+      .checkbox
+        input#campaign4(type='checkbox' name='campaign' value='campaign4')
+        label(for='campaign4') Palace of T&apos;pol
+      .checkbox
+        input#campaign5(type='checkbox' name='campaign' value='campaign5')
+        label(for='campaign5') Talos Tower
+      .checkbox
+        input#campaign6(type='checkbox' name='campaign' value='campaign6')
+        label(for='campaign6') Big Hollow world
+      .checkbox
+        input#campaign7(type='checkbox' name='campaign' value='campaign7')
+        label(for='campaign7') The expansion
+      .checkbox
+        input#campaign8(type='checkbox' name='campaign' value='campaign8')
+        label(for='campaign8') Interphase Hunt
+      .checkbox
+        input#campaign9(type='checkbox' name='campaign' value='campaign9')
+        label(for='campaign9') Romulan Cave
+  fieldset
+    legend Something else to say?
+    label(for='comentarios') Additional comments
+    textarea#comentarios(name='comentarios' cols='20' rows='10')
+  button#submit Submit

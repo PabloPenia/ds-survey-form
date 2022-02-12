@@ -1,0 +1,72 @@
+@use './mixtends' as *
+form
+  padding: 1rem
+  @include breakpoint('tablet')
+    width: 70%
+fieldset
+  margin-top: -1.3rem
+  padding-bottom: 2rem
+  border-color: var(--blue)
+  border-bottom: none
+  @include breakpoint('movil')
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  legend
+    @extend %gradient-title
+    font-size: 1.5em
+  p
+    margin: .5rem
+    color: var(--blue)
+  label
+    padding: .5rem
+.campo
+  display: flex
+  flex-direction: column
+  padding: .5rem 0
+  @include breakpoint('movil')
+    max-width: 45%
+  label
+    color: var(--blue)
+.radios,
+.checkboxes
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  min-width: 100%
+  .radio,
+  .checkbox
+    display: flex
+    flex-direction: column
+    padding: .5rem
+    label
+      max-width: 10rem
+      text-align: center
+@include breakpoint('movil')
+  fieldset p
+    flex: 1 0 100%
+  #dropdown1
+    min-width: 75%
+    justify-content: space-between
+  #dropdown2
+    min-width: 100%
+  .names
+    width: 100%
+
+textarea
+  height: 20rem
+  width: 100%
+  margin-top: .5rem
+#submit
+  width: calc( 100% - 4px )
+  height: 3em
+  margin-left: 2px
+  border: none
+  border-radius: 0 0 1rem 1rem
+  background: var(--blue)
+  cursor: pointer
+  text-transform: uppercase
+  @include hover
+    background: linear-gradient(180deg, var(--light-blue) 0%, var(--blue) 100%, rgba(2,52,62,1) 100%)
+  @include no-hover
+    background: linear-gradient(180deg, var(--light-blue) 0%, var(--blue) 100%, rgba(2,52,62,1) 100%)

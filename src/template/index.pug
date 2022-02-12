@@ -1,0 +1,26 @@
+- //include ./abstracts/_mixins
+doctype html
+html(lang="en")
+  head 
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Poppins&family=Potta+One&display=swap' rel='stylesheet')
+    link(href='assets/styles.min.css' rel='stylesheet')
+    title Dungeons & Starships | Survey Form
+  body
+    main
+      .overlay
+        header
+          h1 Dungeons &amp; Starships
+          p Thank you for taking the time to help us improve the game
+        include ./_form
+        footer
+          p
+            | All data in this survey is for demo purposes, names are inspired on MMORPG games and Rodenberry&apos;s Star Trek universe. Thanks to 
+            a(href='https://pixabay.com/es/users/peter_pyw-2946451/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3077928' target='blank') peter_pyw
+            |  for the background image
+          p
+            | Design by 
+            a(href='https://linkedin.com/in/PabloPenia' target='blank') Pablo Pe&ntilde;a

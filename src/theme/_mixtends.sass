@@ -1,0 +1,51 @@
+@use 'sass:map'
+// 
+//  MIXINS
+//
+
+// breakpoints
+$breakpoints: ( 'movil': (min-width:480px), 'tablet': ( min-width: 900px ) )
+@mixin breakpoint($key)
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $key)
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $key))}
+      @content
+  @else
+    @warn "Unfortunately, no value could be retrieved from `#{$key}`. " + "Available breakpoints are: #{map-keys($breakpoints)}."
+
+// hover/touch STATES
+@mixin hover()
+  @media (hover: hover) and (pointer: fine)
+    &:hover, &:focus
+      @content
+
+@mixin no-hover()
+  @media (hover: none)
+    &:active, &:focus
+      @content
+
+// 
+// MIXTENDS (for using on mediaqueries)
+// use on mediaqueries > @include flex(false). Using without mediaqueries > @include flex
+// @mixin flex($extend: true)
+//   @if $extend
+//     @extend %flex
+//   @else
+//     display: flex
+//     flex-wrap: wrap
+//     justify-content: space-between
+//     align-items: center
+//     gap: 1em
+
+//
+// EXTENDS
+//
+%gradient-title
+  font-family: 'Potta One', cursive
+  background: linear-gradient(180deg, var(--light-blue) 0%, var(--blue) 100%, rgba(2,52,62,1) 100%)
+  background-clip: text
+  -webkit-background-clip: text
+  -moz-background-clip: text
+  -moz-text-fill-color: transparent
+  -webkit-text-fill-color: transparent
