@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;family=Potta+One&amp;display=swap" rel="stylesheet">
+    <link href="assets/styles.min.css" rel="stylesheet">
+    <title>Dungeons & Starships | Survey Form</title>
+  </head>
+  <body>
+    <main>
+      <div class="overlay">
+        <header>
+          <h1>Dungeons &amp; Starships</h1>
+          <p>Thank you for taking the time to help us improve the game</p>
+        </header>
+        <form>
+          <fieldset>
+            <legend>Account Information</legend>
+            <div class="campo names">
+              <label id="name-label" for="name">Name</label>
+              <input id="name" type="text" placeholder="Enter your name" required="">
+            </div>
+            <div class="campo names">
+              <label id="email-label" for="email">Email</label>
+              <input id="email" type="email" placeholder="example@mail.com" required="">
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Describe your main character</legend>
+            <div class="campo">
+              <label id="number-label" for="number">Level</label>
+              <input id="number" type="number" min="1" max="99" placeholder="level">
+            </div>
+            <div class="campo" id="dropdown1">
+              <label for="dropdown">Class</label>
+              <select id="dropdown">
+                <option disabled="" hidden="" selected="">Choose</option>
+                <option value="andorian">Andorian</option>
+                <option value="denobulan">Denobulan</option>
+                <option value="klingon">Klingon</option>
+                <option value="orion">Orion</option>
+                <option value="romulan">Romulan</option>
+                <option value="terran">Terran</option>
+                <option value="vulcan">Vulcan</option>
+              </select>
+            </div>
+            <p>Job</p>
+            <div class="radios">
+              <div class="radio">
+                <input id="assassin" type="radio" name="job" value="assassin">
+                <label for="assassin">Assassin</label>
+              </div>
+              <div class="radio">
+                <input id="healer" type="radio" name="job" value="healer">
+                <label for="healer">Healer</label>
+              </div>
+              <div class="radio">
+                <input id="ranger" type="radio" name="job" value="Ranger">
+                <label for="ranger">Ranger</label>
+              </div>
+              <div class="radio">
+                <input id="tank" type="radio" name="job" value="tank">
+                <label for="tank">Tank</label>
+              </div>
+              <div class="radio">
+                <input id="wizard" type="radio" name="job" value="wizard">
+                <label for="wizard">Wizard</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Tell us about your playing</legend>
+            <div class="campo" id="dropdown2">
+              <label id="time-label" for="time">How many hours do you play the game?</label>
+              <select id="time" name="time">
+                <option value="4">4hs per week</option>
+                <option value="6">6hs per week</option>
+                <option value="10">10hs per week</option>
+                <option value="24">Everytime</option>
+              </select>
+            </div>
+            <p>Which campaigns do you prefer?</p>
+            <div class="checkboxes">
+              <div class="checkbox">
+                <input id="campaign1" type="checkbox" name="campaigns" value="campaign1">
+                <label for="campaign1">Vulcan Catacombs</label>
+              </div>
+              <div class="checkbox">
+                <input id="campaign2" type="checkbox" name="campaigns" value="campaign2">
+                <label for="campaign2">Orion Market</label>
+              </div>
+              <div class="checkbox">
+                <input id="campaign3" type="checkbox" name="campaign" value="campaign3">
+                <label for="campaign3">Terran Dungeons</label>
+              </div>
+              <div class="checkbox">
+                <input id="campaign4" type="checkbox" name="campaign" value="campaign4">
+                <label for="campaign4">Palace of T&apos;pol</label>
+              </div>
+              <div class="checkbox">
+                <input id="campaign5" type="checkbox" name="campaign" value="campaign5">
+                <label for="campaign5">Talos Tower</label>
+              </div>
+              <div class="checkbox">
+                <input id="campaign6" type="checkbox" name="campaign" value="campaign6">
+                <label for="campaign6">Big Hollow world</label>
+              </div>
+              <div class="checkbox">
+                <input id="campaign7" type="checkbox" name="campaign" value="campaign7">
+                <label for="campaign7">The expansion</label>
+              </div>
+              <div class="checkbox">
+                <input id="campaign8" type="checkbox" name="campaign" value="campaign8">
+                <label for="campaign8">Interphase Hunt</label>
+              </div>
+              <div class="checkbox">
+                <input id="campaign9" type="checkbox" name="campaign" value="campaign9">
+                <label for="campaign9">Romulan Cave</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Something else to say?</legend>
+            <label for="comentarios">Additional comments</label>
+            <textarea id="comentarios" name="comentarios" cols="20" rows="10"></textarea>
+          </fieldset>
+          <button id="submit">Submit</button>
+        </form>
+        <footer>
+          <p>All data in this survey is for demo purposes, names are inspired on MMORPG games and Rodenberry&apos;s Star Trek universe. Thanks to <a href="https://pixabay.com/es/users/peter_pyw-2946451/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3077928" target="blank">peter_pyw</a> for the background image</p>
+          <p>Design by <a href="https://linkedin.com/in/PabloPenia" target="blank">Pablo Pe&ntilde;a</a></p>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
